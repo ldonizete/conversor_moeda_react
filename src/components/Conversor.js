@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Conversor.css'
+import 'font-awesome/css/font-awesome.min.css';
 
 export default class Conversor extends Component {
   // eslint-disable-next-line no-useless-constructor
@@ -30,7 +31,6 @@ export default class Conversor extends Component {
   }
 
   handleChange(event) {
-    console.log(1, event.target.value);
     const value = event.target.value.replace(/\D/, '');
     this.setState({financialGoal: value})
   }
@@ -60,7 +60,7 @@ export default class Conversor extends Component {
           >
           </input>
         </div>
-        <h2>{this.state.moedaB_valor}</h2>
+        <h2>${this.state.moedaB_valor}</h2>
       </div>
     )
   }
